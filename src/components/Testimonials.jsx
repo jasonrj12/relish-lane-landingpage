@@ -26,11 +26,11 @@ const Testimonials = () => {
   ]
 
   return (
-    <section id="testimonials" className="py-20 bg-gradient-to-b from-amber-50 to-white">
+    <section id="testimonials" className="py-20 bg-gradient-to-b from-amber-50 to-white dark:from-gray-800 dark:to-gray-900 transition-colors duration-300">
       <div className="container mx-auto px-4 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="section-title">Voices of Relish Lane</h2>
-          <p className="section-subtitle">
+          <h2 className="section-title dark:text-white">Voices of Relish Lane</h2>
+          <p className="section-subtitle dark:text-gray-300">
             Hear why our community keeps coming back for more.
           </p>
         </div>
@@ -39,9 +39,9 @@ const Testimonials = () => {
           {testimonials.map((testimonial, index) => (
             <div 
               key={index}
-              className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300 relative"
+              className="bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 relative"
             >
-              <Quote className="absolute top-6 right-6 w-12 h-12 text-amber-200 opacity-50" />
+              <Quote className="absolute top-6 right-6 w-12 h-12 text-amber-200 dark:text-amber-700 opacity-50" />
               
               <div className="flex items-center mb-4">
                 {[...Array(testimonial.rating)].map((_, i) => (
@@ -49,17 +49,17 @@ const Testimonials = () => {
                 ))}
               </div>
 
-              <p className="text-gray-700 mb-6 leading-relaxed italic">
+              <p className="text-gray-700 dark:text-gray-300 mb-6 leading-relaxed italic">
                 "{testimonial.text}"
               </p>
 
               <div className="flex items-center">
-                <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center text-white font-bold text-lg">
+                <div className="w-12 h-12 bg-primary dark:bg-accent rounded-full flex items-center justify-center text-white font-bold text-lg">
                   {testimonial.name.charAt(0)}
                 </div>
                 <div className="ml-4">
-                  <h4 className="font-bold text-gray-900">{testimonial.name}</h4>
-                  <p className="text-sm text-gray-500">Verified Customer</p>
+                  <h4 className="font-bold text-gray-900 dark:text-white">{testimonial.name}</h4>
+                  <p className="text-sm text-gray-500 dark:text-gray-400">Verified Customer</p>
                 </div>
               </div>
             </div>

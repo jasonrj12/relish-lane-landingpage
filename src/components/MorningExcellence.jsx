@@ -26,14 +26,14 @@ const MorningExcellence = () => {
   ]
 
   return (
-    <section className="py-20 bg-gradient-to-b from-white to-amber-50">
+    <section className="py-20 bg-gradient-to-b from-white to-amber-50 dark:from-gray-900 dark:to-gray-800 transition-colors duration-300">
       <div className="container mx-auto px-4 lg:px-8">
         <div className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             {/* Content */}
             <div>
-              <h2 className="section-title">Morning Excellence</h2>
-              <p className="text-lg text-gray-600 mb-8 leading-relaxed">
+              <h2 className="section-title dark:text-white">Morning Excellence</h2>
+              <p className="text-lg text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
                 Expand your horizons with our diverse range of global flavors. From the crisp, 
                 authentic crunch of our Vietnamese-style Banh Mi (available with savory Chicken 
                 or Tofu) and our nutrient-packed Tricolour Quinoa Salad, to our hearty, 
@@ -45,11 +45,11 @@ const MorningExcellence = () => {
                 {offerings.map((item, index) => (
                   <div 
                     key={index}
-                    className="p-6 bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300"
+                    className="p-6 bg-white dark:bg-gray-800 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
                   >
-                    <div className="text-primary mb-3">{item.icon}</div>
-                    <h3 className="text-xl font-bold mb-2">{item.title}</h3>
-                    <p className="text-gray-600 text-sm">{item.description}</p>
+                    <div className="text-primary dark:text-accent mb-3">{item.icon}</div>
+                    <h3 className="text-xl font-bold dark:text-white mb-2">{item.title}</h3>
+                    <p className="text-gray-600 dark:text-gray-300 text-sm">{item.description}</p>
                   </div>
                 ))}
               </div>

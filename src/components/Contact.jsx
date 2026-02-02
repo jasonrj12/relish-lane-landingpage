@@ -3,11 +3,11 @@ import { MapPin, Phone, Mail, Clock } from 'lucide-react'
 
 const Contact = () => {
   return (
-    <section id="contact" className="py-20 bg-white">
+    <section id="contact" className="py-20 bg-white dark:bg-gray-900 transition-colors duration-300">
       <div className="container mx-auto px-4 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="section-title">Contact Us</h2>
-          <p className="section-subtitle">
+          <h2 className="section-title dark:text-white">Contact Us</h2>
+          <p className="section-subtitle dark:text-gray-300">
             We'd love to hear from you. Visit us or get in touch!
           </p>
         </div>
@@ -17,12 +17,12 @@ const Contact = () => {
             {/* Contact Information */}
             <div className="space-y-8">
               <div className="flex items-start space-x-4">
-                <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center text-white flex-shrink-0">
+                <div className="w-12 h-12 bg-primary dark:bg-accent rounded-full flex items-center justify-center text-white flex-shrink-0">
                   <MapPin size={24} />
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold mb-2">Location</h3>
-                  <p className="text-gray-600">
+                  <h3 className="text-xl font-bold dark:text-white mb-2">Location</h3>
+                  <p className="text-gray-600 dark:text-gray-300">
                     3 Wellesley Avenue<br />
                     Iver, SL0 9AU<br />
                     United Kingdom
@@ -31,7 +31,7 @@ const Contact = () => {
                     href="https://www.google.com/maps/search/?api=1&query=3+Wellesley+Avenue+Iver+SL0+9AU" 
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-primary hover:text-secondary font-medium inline-block mt-2"
+                    className="text-primary dark:text-accent hover:text-secondary dark:hover:text-orange-400 font-medium inline-block mt-2"
                   >
                     View on Google Maps →
                   </a>
@@ -39,14 +39,14 @@ const Contact = () => {
               </div>
 
               <div className="flex items-start space-x-4">
-                <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center text-white flex-shrink-0">
+                <div className="w-12 h-12 bg-primary dark:bg-accent rounded-full flex items-center justify-center text-white flex-shrink-0">
                   <Phone size={24} />
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold mb-2">Phone</h3>
+                  <h3 className="text-xl font-bold dark:text-white mb-2">Phone</h3>
                   <a 
                     href="tel:01753926600" 
-                    className="text-gray-600 hover:text-primary"
+                    className="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-accent"
                   >
                     01753 926600
                   </a>
@@ -54,14 +54,14 @@ const Contact = () => {
               </div>
 
               <div className="flex items-start space-x-4">
-                <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center text-white flex-shrink-0">
+                <div className="w-12 h-12 bg-primary dark:bg-accent rounded-full flex items-center justify-center text-white flex-shrink-0">
                   <Mail size={24} />
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold mb-2">Email</h3>
+                  <h3 className="text-xl font-bold dark:text-white mb-2">Email</h3>
                   <a 
                     href="mailto:info@relishlane.co.uk" 
-                    className="text-gray-600 hover:text-primary"
+                    className="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-accent"
                   >
                     info@relishlane.co.uk
                   </a>
@@ -69,12 +69,12 @@ const Contact = () => {
               </div>
 
               <div className="flex items-start space-x-4">
-                <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center text-white flex-shrink-0">
+                <div className="w-12 h-12 bg-primary dark:bg-accent rounded-full flex items-center justify-center text-white flex-shrink-0">
                   <Clock size={24} />
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold mb-2">Opening Hours</h3>
-                  <div className="text-gray-600 space-y-1">
+                  <h3 className="text-xl font-bold dark:text-white mb-2">Opening Hours</h3>
+                  <div className="text-gray-600 dark:text-gray-300 space-y-1">
                     <p>Monday - Friday: 12:00 PM - 10:00 PM</p>
                     <p>Saturday - Sunday: 12:00 PM - 10:30 PM</p>
                   </div>
@@ -83,7 +83,7 @@ const Contact = () => {
             </div>
 
             {/* Google Map */}
-            <div className="bg-gray-200 rounded-2xl overflow-hidden shadow-xl h-[500px]">
+            <div className="bg-gray-200 dark:bg-gray-700 rounded-2xl overflow-hidden shadow-xl h-[500px]">
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1241.6378102658296!2d-0.5068054410003731!3d51.50815923643401!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487671007e8e7f35%3A0x4ecb4cb595f920ef!2sRelish%20Lane%20Multicuisine%20Takeaway!5e0!3m2!1sen!2slk!4v1769716844719!5m2!1sen!2slk"
                 width="100%"
