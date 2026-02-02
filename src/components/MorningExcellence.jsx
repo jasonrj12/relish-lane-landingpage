@@ -16,7 +16,7 @@ const MorningExcellence = () => {
     {
       icon: <Award className="w-8 h-8" />,
       title: 'Hearty Burritos',
-      description: 'Rice-filled comfort wrapped to perfection',
+      description: 'Hearty comfort wrapped to perfection',
     },
     {
       icon: <Coffee className="w-8 h-8" />,
@@ -37,8 +37,8 @@ const MorningExcellence = () => {
                 Expand your horizons with our diverse range of global flavors. From the crisp, 
                 authentic crunch of our Vietnamese-style Banh Mi (available with savory Chicken 
                 or Tofu) and our nutrient-packed Tricolour Quinoa Salad, to our hearty, 
-                rice-filled Burritos and aromatic Chicken Curries—featuring fragrant Lime Leaf 
-                or bold Madras spices—we have the perfect bite.
+                rice-filled Burritos and aromatic Chicken Curries - featuring fragrant Lime Leaf 
+                or bold Madras spices - we have the perfect bite.
               </p>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">

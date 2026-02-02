@@ -54,7 +54,7 @@ const EveningMenu = () => {
               </h2>
               <p className="text-lg text-gray-600 leading-relaxed mb-8">
                 From the spice-rich streets of Kerala to the bold kitchens of Seoul and 
-                Mexico City, our evening menu is a celebration of flavor. Whether you're 
+                Mexico, our evening menu is a celebration of flavor. Whether you're 
                 looking for a comforting classic or a daring new fusion, we have the 
                 perfect plate waiting for you.
               </p>
@@ -71,7 +71,7 @@ const EveningMenu = () => {
                 <div className="border-l-4 border-secondary pl-6">
                   <h3 className="text-2xl font-bold mb-2">Korean Delights</h3>
                   <p className="text-gray-600">
-                    Bold, umami-rich dishes from Seoul's vibrant food scene, featuring 
+                    Bold, jang-infused dishes from Seoul's vibrant food scene, featuring 
                     perfectly balanced flavors.
                   </p>
                 </div>

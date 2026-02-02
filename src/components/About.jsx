@@ -37,8 +37,8 @@ const About = () => {
               </div>
               <div className="mt-8 flex flex-wrap gap-4">
                 <div className="flex-1 min-w-[150px] text-center p-6 bg-amber-50 rounded-lg">
-                  <div className="text-4xl font-bold text-primary mb-2">100%</div>
-                  <div className="text-sm text-gray-600">Fresh Ingredients</div>
+                  <div className="text-4xl font-bold text-primary mb-2">3+</div>
+                  <div className="text-sm text-gray-600">Cuisines</div>
                 </div>
                 <div className="flex-1 min-w-[150px] text-center p-6 bg-amber-50 rounded-lg">
                   <div className="text-4xl font-bold text-primary mb-2">50+</div>
