@@ -74,7 +74,7 @@ const Header = () => {
               </a>
             ))}
             
-            {/* Dark Mode Toggle */}
+            {/* Theme Toggle */}
             <button
               onClick={toggleDarkMode}
               className={`ml-2 p-2.5 rounded-lg transition-all duration-300 ${
@@ -82,7 +82,7 @@ const Header = () => {
                   ? 'text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700' 
                   : 'text-white hover:bg-white/10'
               }`}
-              aria-label="Toggle dark mode"
+              aria-label="Toggle theme"
             >
               {darkMode ? <Sun size={20} /> : <Moon size={20} />}
             </button>
@@ -102,7 +102,7 @@ const Header = () => {
             </a>
           </nav>
 
-          {/* Mobile Menu Button & Dark Mode Toggle */}
+          {/* Mobile Menu Button & Theme Toggle */}
           <div className="lg:hidden flex items-center space-x-2">
             <button
               onClick={toggleDarkMode}
@@ -111,7 +111,8 @@ const Header = () => {
                   ? 'text-gray-900 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700' 
                   : 'text-white hover:bg-white/10'
               }`}
-              aria-label="Toggle dark mode"
+              aria-label="Toggle theme"
+              title={darkMode ? 'Switch to Light Mode' : 'Switch to Dark Mode'}
             >
               {darkMode ? <Sun size={22} /> : <Moon size={22} />}
             </button>

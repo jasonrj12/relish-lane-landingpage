@@ -11,30 +11,47 @@ export const useDarkMode = () => {
 }
 
 export const DarkModeProvider = ({ children }) => {
+  // Auto-detect system preference on first load, then allow manual toggle
   const [darkMode, setDarkMode] = useState(() => {
-    // Check localStorage first
     const savedMode = localStorage.getItem('darkMode')
     if (savedMode !== null) {
       return savedMode === 'true'
     }
-    // Fall back to system preference
+    // Auto-detect from system on first visit
     return window.matchMedia('(prefers-color-scheme: dark)').matches
   })
 
+  // Apply dark mode class to html element
   useEffect(() => {
-    // Apply dark mode class to html element
     if (darkMode) {
       document.documentElement.classList.add('dark')
     } else {
       document.documentElement.classList.remove('dark')
     }
-    // Save to localStorage
+  }, [darkMode])
+
+  // Save theme preference
+  useEffect(() => {
     localStorage.setItem('darkMode', darkMode)
   }, [darkMode])
 
+  // Simple toggle between light and dark
   const toggleDarkMode = () => {
     setDarkMode(prev => !prev)
   }
+
+  // Add keyboard shortcut (Ctrl/Cmd + Shift + L)
+  useEffect(() => {
+    const handleKeyPress = (e) => {
+      if ((e.ctrlKey || e.metaKey) && e.shiftKey && e.key.toLowerCase() === 'l') {
+        e.preventDefault()
+        toggleDarkMode()
+      }
+    }
+
+    window.addEventListener('keydown', handleKeyPress)
+    return () => window.removeEventListener('keydown', handleKeyPress)
+  }, []) // eslint-disable-line react-hooks/exhaustive-deps
 
   return (
     <DarkModeContext.Provider value={{ darkMode, toggleDarkMode }}>
