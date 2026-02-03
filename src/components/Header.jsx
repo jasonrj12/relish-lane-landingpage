@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
-import { Menu, X, ShoppingBag, Moon, Sun } from 'lucide-react'
+import { ShoppingBag, Moon, Sun } from 'lucide-react'
 import { useDarkMode } from '../context/DarkModeContext'
+import MobileMenuToggle from './MobileMenuToggle'
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false)
@@ -116,17 +117,11 @@ const Header = () => {
             >
               {darkMode ? <Sun size={22} /> : <Moon size={22} />}
             </button>
-            <button
+            <MobileMenuToggle 
+              isOpen={isMobileMenuOpen}
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className={`p-2.5 rounded-lg transition-all duration-300 ${
-                isScrolled 
-                  ? 'text-gray-900 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700' 
-                  : 'text-white hover:bg-white/10'
-              }`}
-              aria-label="Toggle menu"
-            >
-              {isMobileMenuOpen ? <X size={26} /> : <Menu size={26} />}
-            </button>
+              isScrolled={isScrolled}
+            />
           </div>
         </div>
 
@@ -136,14 +131,16 @@ const Header = () => {
             isMobileMenuOpen ? 'max-h-96 mt-6' : 'max-h-0'
           }`}
         >
-          <div className="bg-white/95 dark:bg-gray-800/95 backdrop-blur-md rounded-2xl shadow-2xl p-6 border border-gray-100 dark:border-gray-700">
-            <nav className="flex flex-col space-y-3">
-              {navLinks.map((link) => (
+          <div className="bg-white/95 dark:bg-gray-800/95 backdrop-blur-md rounded-xl shadow-2xl p-6 border border-gray-100 dark:border-gray-700">
+            <nav className="flex flex-col space-y-0">
+              {navLinks.map((link, index) => (
                 <a
                   key={link.name}
                   href={link.href}
                   onClick={() => setIsMobileMenuOpen(false)}
-                  className="px-4 py-3 text-gray-700 dark:text-gray-200 hover:text-primary dark:hover:text-accent hover:bg-amber-50 dark:hover:bg-gray-700 font-medium transition-all duration-300 rounded-lg"
+                  className={`px-4 py-3 text-gray-700 dark:text-gray-200 hover:text-primary dark:hover:text-accent hover:bg-amber-50 dark:hover:bg-gray-700 font-medium transition-all duration-300 rounded-lg ${
+                    index < navLinks.length - 1 ? 'border-b border-gray-200 dark:border-gray-700' : ''
+                  }`}
                 >
                   {link.name}
                 </a>
