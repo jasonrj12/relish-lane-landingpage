@@ -63,8 +63,7 @@ const EveningMenu = () => {
                 <div className="border-l-4 border-primary dark:border-accent pl-6">
                   <h3 className="text-2xl font-bold dark:text-white mb-2">Kerala Classics</h3>
                   <p className="text-gray-600 dark:text-gray-300">
-                    Experience authentic South Indian flavors with our traditional Kerala dishes, 
-                    prepared with aromatic spices and fresh ingredients.
+                  Experience authentic South Indian flavors with our traditional Kerala dishes, prepared with aromatic spices.
                   </p>
                 </div>
 
