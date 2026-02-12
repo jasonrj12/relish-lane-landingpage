@@ -1,5 +1,5 @@
 import React from 'react'
-import { Coffee, Croissant, Salad, Award } from 'lucide-react'
+import { Coffee, Croissant, Salad, Award, Sun } from 'lucide-react'
 
 const MorningExcellence = () => {
   const offerings = [
@@ -29,6 +29,24 @@ const MorningExcellence = () => {
     <section className="py-20 bg-gradient-to-b from-white to-amber-50 dark:from-gray-900 dark:to-gray-800 transition-colors duration-300">
       <div className="container mx-auto px-4 lg:px-8">
         <div className="max-w-6xl mx-auto">
+          {/* Morning menu highlight callout */}
+          <div className="mb-12 relative p-8 md:p-10 rounded-2xl bg-gradient-to-r from-amber-200 via-amber-100 to-orange-100 dark:from-amber-800/50 dark:via-amber-900/40 dark:to-amber-800/50 border-2 border-amber-500 dark:border-amber-500 shadow-xl ring-2 ring-amber-400/50 dark:ring-amber-500/30 text-center overflow-hidden">
+            <div className="absolute top-4 left-4 text-amber-500/30 dark:text-amber-400/20" aria-hidden="true">
+              <Sun className="w-16 h-16" />
+            </div>
+            <div className="absolute top-4 right-4 text-amber-500/30 dark:text-amber-400/20" aria-hidden="true">
+              <Coffee className="w-16 h-16" />
+            </div>
+            <div className="relative">
+              <span className="inline-block px-4 py-1.5 mb-4 rounded-full bg-amber-500 dark:bg-amber-600 text-white text-sm font-bold uppercase tracking-wider">
+                Morning menu
+              </span>
+              <p className="text-xl md:text-2xl text-amber-950 dark:text-amber-50 font-semibold leading-relaxed max-w-3xl mx-auto">
+                Now serving breakfast daily from 7:00 AM. Fresh coffee, hot plates, and the perfect vibes to start your day right.
+              </p>
+            </div>
+          </div>
+
           <div className="grid md:grid-cols-2 gap-12 items-center">
             {/* Content */}
             <div>
